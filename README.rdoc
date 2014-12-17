@@ -1,0 +1,19 @@
+= net-ftp-putstring
+
+Allow to upload a string onto a FTP server using a StringIO object instead of a file
+
+= Example
+
+require 'net/ftp'
+
+ftp = Net::FTP.open('ftp.target-ftp-server-example.io')
+
+ftp.login 'user', 'password'
+
+ftp.putstring('My Fancy String', 'target_file.txt')
+
+ftp.close
+
+== Copyright
+
+See LICENSE for details.
